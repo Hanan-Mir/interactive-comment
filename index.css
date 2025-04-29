@@ -21,14 +21,17 @@ body{
     max-width: 1200px;
     height: 100vh;
     margin: 2% auto;
-    position: relative; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
 }
 .comment-section{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
  
 }
@@ -118,10 +121,10 @@ body{
     right: -2%; */
 }
 .reply-comment .comment-top-left{
-    width: 32%;
+    width: 36%;
 }
 .reply-comment .comment-top-right{
-width: 8%;
+width: 10%;
 }
 .admin .comment-top-left{
     width: 36%;
@@ -229,4 +232,14 @@ font-size: 1rem;
     padding: 10px 40px;
     font-weight: 400;
     border-radius: 10px;
+}
+.replyingTo{
+    color: var(--Primary-purple-600);
+}
+.plus,.minus{
+    width: 20px;
+}
+.reply:hover{
+    opacity: 0.7;
+    cursor: pointer;
 }
