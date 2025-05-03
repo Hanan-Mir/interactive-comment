@@ -30,8 +30,8 @@ body{
     width: 100%;
     display: flex;
     /* flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */ 
+    justify-content: flex-start;
+    align-items: center; */
 
  
 }
@@ -267,4 +267,48 @@ font-size: 1rem;
 }
 .overlay .active{
     display: block;
+}
+#edit-area{
+    width:90%;
+    height: 150px;
+    margin-top: 1%;
+    font-family: 'Rubik';
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+.admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.admin .right{
+    width: 100%;
+}
+.admin .top{
+    width: 100%;
+}
+.adminCommentSection{
+    width: 100%;
+    background-color: var(--neutral-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+.adminCommentSection textarea{
+    width: 80%;
+    height:150px;
+    resize: none;
+    border-radius: 10px;
+font-size: 1rem;
+}
+.adminCommentContainer{
+    width:100% ;
+}
+.adminCommentContainer .comment-top-left{
+    width: 25%;
 }

@@ -22,7 +22,9 @@ this._container.addEventListener('click',(e)=>{
         let myLabel=leftEl.querySelector('.score');
       minusEl=leftEl.querySelector('.minus');
       plusEl=leftEl.querySelector('.plus');
+      if(myLabel.textContent>0){
         myLabel.textContent=+myLabel.textContent-1;
+      }
     minusEl.classList.add('disabled');
     plusEl.classList.remove('disabled');
     }

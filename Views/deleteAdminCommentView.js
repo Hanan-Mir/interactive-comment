@@ -15,9 +15,11 @@ addHandlerDeleteComment(){
             overlay=document.querySelector('.overlay');
             overlay.style.opacity=1;
             overlay.style.zIndex=0;
+            window.scrollTo({
+                top:0,
+                behaviour:"smooth"
+            })
             upVoteAndDownVoteView._container.insertAdjacentHTML('beforeend',html);
-         console.log(comment);
-            // comment.remove();
         }
         if(e.target.classList.contains('noBtn')){
             let deleteEl=document.querySelector('.delete-container');

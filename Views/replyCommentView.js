@@ -79,7 +79,7 @@ generateReply(usertext,to){
   <div class="reply-comment admin">
             <div class="left">
                 <a href="#" class="response"><img class='plus' src="${iconPlus}" alt=""></a>
-                <p class="score">12</p>
+                <p class="score">0</p>
                 <a href="#" class="response"><img class='minus' src="${iconMinus}" alt=""></a>
                             </div>
                             <div class="right">
@@ -88,7 +88,7 @@ generateReply(usertext,to){
                 <img src="${juliusomo}" alt="" class="avatar">
                 <p class="name">juliusomo</p>
                 <p class="adminName">you</p>
-                <p id="duration">1 month ago</p>
+                <p id="duration">${this.getCurrentTime(new Date())}</p>
                                 </div>
                                 <div class="comment-top-right">
                                     <div class="delete">
@@ -105,6 +105,7 @@ generateReply(usertext,to){
                                     <p class="description">
                                    <span class='replyingTo'> @${to}</span>  ${usertext}
                                     </p>
+                                    
                                 </div>
                             </div>
         </div>

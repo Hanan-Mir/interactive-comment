@@ -62,7 +62,6 @@ class CommentView extends View{
             }
         })
         if(data.user.username!=user){
-console.log('hello');
                     return `<div class="reply-comment">
                 <div class="left">
                     <a href="#" class="response"><img class="plus" src="${iconPlus}" alt=""></a>
@@ -120,6 +119,7 @@ console.log('hello');
                                     <span class='replyingTo'> @${data.replyingTo}</span> ${data.content}
                                     </p>
                                 </div>
+                                
                             </div>
         </div>`
         }
