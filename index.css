@@ -20,7 +20,7 @@ body{
     width: 100%;
     max-width: 1200px;
     height: 100vh;
-    margin: 2% auto;
+     margin: 2% auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ body{
     background-color: var(--neutral-grey-100);
     padding: 1%;
     border-radius: 10px;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 .score{
     margin: 4px 0px;
@@ -294,7 +294,7 @@ font-size: 1rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 1%;
     border-radius: 20px;
     margin-bottom: 2%;
@@ -311,4 +311,95 @@ font-size: 1rem;
 }
 .adminCommentContainer .comment-top-left{
     width: 25%;
+}
+.fixedposition{
+    position: fixed;
+}
+/* writing the media qureries for the small mobile designs */
+@media only screen and (max-width:410px){
+    .container{
+        align-items: center;
+        width:100% ;
+        margin: 0 0;
+    }
+.comment{
+   width:100%;
+   position: relative;
+   border-radius: 5px;
+}
+.comment-top-left{
+    width: 80%;
+}
+.comment .comment-top-right{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.bottom{
+    padding: 3%;
+}
+.bottom .description{
+    font-size: 1rem;
+    line-height: 1.2;
+    width: 95%;
+    position: relative;
+}
+.comment .left{
+    position: absolute;
+    bottom: 1%;
+    left: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 18%;
+    margin: 0;
+}
+.plus,.minus,.score{
+    width:15px ;
+    margin: 0;
+    padding: 0;
+}
+.response{
+    display: flex;
+    align-items: center;
+}
+.reply-comment{
+    width: 100%;
+    position: relative;
+}
+.reply-comment .comment-top-left{
+    width: 80%;
+}
+.reply-comment .comment-top-right{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.reply-comment .left{
+    position: absolute;
+    bottom: 1%;
+    left: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 18%;
+    margin: 0;
+}
+.admin .comment-top-right{
+    width: 50%;
+}
+#userInputComment{
+    width: 60%;
+}
+.reply{
+    width:100%
+}
+.delete-container{
+    width:90% ;
+    right:1%;
+}
+.updateBtn{
+    position: absolute;
+    bottom: 1%;
+}
 }

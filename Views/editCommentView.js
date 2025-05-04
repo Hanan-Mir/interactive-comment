@@ -20,6 +20,7 @@ if(e.target.classList.contains('edit')){
 
 }
 if(e.target.classList.contains('updateBtn')){
+    let html;
     const wholeContainer=e.target.closest('.admin');
     const editBtn=wholeContainer.querySelector('.disabled');
     const commentContainer=wholeContainer.querySelector('.bottom');
@@ -27,10 +28,17 @@ if(e.target.classList.contains('updateBtn')){
     const wholeDescriptionEl=wholeContainer.querySelector('.description');
     const updateBtn=wholeContainer.querySelector('.updateBtn');
     editBtn.classList.remove('disabled');
+    if(wholeContainer.classList.contains('adminCommentContainer')){
+        html=`<p class="description">
+                                    ${textEntered.trim()}
+                                    </p>`
+    }
+    else{
     const index=textEntered.indexOf(' ')
-    const html=`<p class="description">
+    html=`<p class="description">
                                     <span class='replyingTo'>${textEntered.split(' ')[0]}</span> ${textEntered.trim().slice(index+1)}
                                     </p>`
+    }
     updateBtn.remove();
     wholeDescriptionEl.remove();
     commentContainer.insertAdjacentHTML('afterbegin',html);

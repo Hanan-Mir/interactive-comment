@@ -9,6 +9,7 @@ addHandlerDeleteComment(){
       e.preventDefault();
         if(e.target.classList.contains('delete')){
             comment=e.target.closest('.reply-comment');
+            upVoteAndDownVoteView._container.classList.add('fixedposition');
             // upVoteAndDownVoteView._container.style.background=0.5;
             let html=this.renderDeleteMarkup();
             // upVoteAndDownVoteView._container.classList.add('blur');
@@ -17,7 +18,8 @@ addHandlerDeleteComment(){
             overlay.style.zIndex=0;
             window.scrollTo({
                 top:0,
-                behaviour:"smooth"
+                behaviour:"smooth",
+
             })
             upVoteAndDownVoteView._container.insertAdjacentHTML('beforeend',html);
         }
@@ -27,6 +29,7 @@ addHandlerDeleteComment(){
             overlay.style.opacity=0;
             overlay.style.zIndex=-1;
             deleteEl.remove();
+            upVoteAndDownVoteView._container.classList.remove('fixedposition');
         }
         if(e.target.classList.contains('yesBtn')){
             comment.remove();
@@ -35,6 +38,7 @@ addHandlerDeleteComment(){
             overlay.style.zIndex=-1;
             deleteEl.remove();
             upVoteAndDownVoteView._container.classList.remove('blur');
+            upVoteAndDownVoteView._container.classList.remove('fixedposition');
         };
     })
 }

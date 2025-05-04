@@ -11,13 +11,15 @@ addHandlerAdminComment(){
     upVoteAndDownVoteView._container.addEventListener('click',(e)=>{
 if(e.target.classList.contains('adminComment')){
 let input=document.querySelector('#adminInputComment');
+let commentTextArea=e.target.closest('.adminCommentSection');
+
 enteredText=input.value;
 if(!enteredText){
     alert('Enter the comment first');
     return;
 }
 let html=this.generateMarkup(enteredText);
-upVoteAndDownVoteView._container.insertAdjacentHTML('afterbegin',html);
+commentTextArea.insertAdjacentHTML('beforebegin',html);
 input.value='';
 }
 
